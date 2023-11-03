@@ -1,4 +1,4 @@
-## specifics about infrastructure
+## specifics about Web infrastructure
 #### Server:
     A computer that provides services or resources to other computers over a network.
 #### Domain Name:
