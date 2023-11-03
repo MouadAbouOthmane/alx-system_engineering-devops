@@ -24,8 +24,12 @@
 #### Downtime During Maintenance:
         When maintenance or updates are required, such as deploying new code or restarting the web server, it can lead to downtime.
         During this downtime, the website or web application may be temporarily inaccessible to users. To minimize this issue,
-        load balancers and redundancy can be used to allow updates and maintenance on one server while another continues to serve users. Additionally, rolling deployments and blue-green deployment strategies can reduce downtime during code updates.
+        load balancers and redundancy can be used to allow updates and maintenance on one server while another continues to serve users.
+        Additionally, rolling deployments and blue-green deployment strategies can reduce downtime during code updates.
         
 #### Limited Scalability:
-        If the infrastructure cannot handle high levels of incoming traffic, it means it lacks scalability. To address this issue, the infrastructure should be designed to scale horizontally, which involves adding more servers or resources to handle increased traffic. Load balancing and auto-scaling configurations can help distribute the load and automatically add resources when traffic spikes occur, ensuring the system can handle varying levels of demand without performance degradation.
+        If the infrastructure cannot handle high levels of incoming traffic, it means it lacks scalability. To address this issue,
+        the infrastructure should be designed to scale horizontally, which involves adding more servers or resources to handle increased traffic.
+        Load balancing and auto-scaling configurations can help distribute the load and automatically add resources when traffic spikes occur,
+        ensuring the system can handle varying levels of demand without performance degradation.
         
