@@ -16,7 +16,10 @@
 ## explanation of the issues with the described infrastructure:
 
 #### SPOF (Single Point of Failure):
-        A Single Point of Failure (SPOF) occurs when there's a critical component or element within the infrastructure that, if it fails, can disrupt the entire system. In the described infrastructure, potential SPOFs could be the central web server or database server. If either of these servers fails, it could result in a complete loss of service. To mitigate this, redundancy and failover mechanisms can be implemented to ensure service continuity.
+        A Single Point of Failure (SPOF) occurs when there's a critical component or element within the infrastructure that,
+        if it fails, can disrupt the entire system. In the described infrastructure, potential SPOFs could be the central 
+        web server or database server. If either of these servers fails, it could result in a complete loss of service.
+        To mitigate this, redundancy and failover mechanisms can be implemented to ensure service continuity.
         
 #### Downtime During Maintenance:
         When maintenance or updates are required, such as deploying new code or restarting the web server, it can lead to downtime. During this downtime, the website or web application may be temporarily inaccessible to users. To minimize this issue, load balancers and redundancy can be used to allow updates and maintenance on one server while another continues to serve users. Additionally, rolling deployments and blue-green deployment strategies can reduce downtime during code updates.
