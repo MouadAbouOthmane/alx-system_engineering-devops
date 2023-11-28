@@ -1,2 +1,3 @@
 Host 3.90.84.83
-IdentityFile ~/.ssh/school
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
