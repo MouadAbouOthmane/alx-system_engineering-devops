@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Configure Nginx server so that /redirect_me is redirecting to another page.
+
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.html
+mkdir /var/www/html/redirect_me
+touch /var/www/html/redirect_me/index.html
+replaced="server_name _;"
+new_string="server_name _;\n\n\tlocation = /redirect_me/ {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
+
+sed -i "s|$replaced|$new_string|" default
