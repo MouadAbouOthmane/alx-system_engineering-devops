@@ -3,11 +3,11 @@
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "Hello World!" > /var/www/html/index.html
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.html'
 
 sudo sed -i '/^}$/i \ \n\tlocation \/redirect_me {return 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;}' /etc/nginx/sites-available/default
 # sudo sed -i '/^}$/i \ \n\tlocation @404 {return 404 "Ceci n'\''est pas une page\\n";}' /etc/nginx/sites-available/default
 # sudo sed -i 's/=404/@404/g' /etc/nginx/sites-available/default
 sudo sed -i '/^}$/i \ \n\terror_page 404 = @redirect;' /etc/nginx/sites-available/default
-sudo sed -i '/^}$/i \ \nlocation @redirect {\n\t\teturn 404 "Ceci n'\''est pas une page";\n\t}' /etc/nginx/sites-available/default
+sudo sed -i '/^}$/i \ \n\rlocation @redirect {\n\t\treturn 404 "Ceci n'\''est pas une page";\n\t}' /etc/nginx/sites-available/default
 sudo service nginx start
