@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # install nginx and create a index page
 
-apt-get -y install nginx
-echo "Hello World!" > /var/www/html/index.html
+sudo apt-get -y install nginx
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.html'
