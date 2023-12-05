@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # 0. Double the number of webservers
 hostname=$(hostname)
-
 sudo sed -i "/^}$/i \ \n\tadd_header X-Served-By $hostname;" /etc/nginx/sites-available/default
+sudo systemctl reload nginx
