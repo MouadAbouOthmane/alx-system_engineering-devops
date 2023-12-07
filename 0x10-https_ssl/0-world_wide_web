@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Display information about subdomains.
+
+if [ $# -eq 1 ]; then
+    names='www lb-01 web-01 web-02'
+    for name in $names
+    do
+        CMD=$(dig $name.$1 | grep -A1 'ANSWER SECTION:' |tail -1)
+        echo -n "The subdomain $name is a "
+        echo -e ${CMD} | awk -F' ' '{print $4,"record and points to",$5}'
+    done
+
+else
+    CMD=$(dig $2.$1 | grep -A1 'ANSWER SECTION:' |tail -1)
+    echo -n "The subdomain $2 is a "
+    echo -e ${CMD} | awk -F' ' '{print $4,"record and points to",$5}'
+fi
