@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # 4. Setup a Primary-Replica infrastructure using MySQL
 mysqldump -u root -p "$1" --all-databases > backup.sql
-tar -cfz "$(date '+%d-%m-%Y')".tar.gz backup.sql 
+tar cfz "$(date '+%d-%m-%Y')".tar.gz backup.sql 
