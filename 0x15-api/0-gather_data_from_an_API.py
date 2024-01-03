@@ -23,7 +23,7 @@ if __name__ == "__main__":
     for x in todo_list:
         if x['completed']:
             num_task_done += 1
-            task_title += '\t'
+            task_title += '\t '
             task_title += x['title']
             task_title += '\n'
 
