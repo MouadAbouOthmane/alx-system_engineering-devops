@@ -28,5 +28,5 @@ if __name__ == "__main__":
             task_title += '\n'
 
     print(f"Employee {user_name} is done with tasks",
-          f"({num_task_done}/{total_number}):")
+          f"({num_task_done}/{total_number}):", sep='')
     print(task_title, end='')
