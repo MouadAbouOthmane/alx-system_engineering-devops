@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """0. How many subs?"""
-import requests
 
 
 def number_of_subscribers(subreddit):
     """Reddit API endpoint for getting subreddit information"""
+    import requests
+
     if not subreddit:
         return 0
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
