@@ -1,7 +1,7 @@
 # fixes number of open files
 
 exec { 'fix--for-nginx':
-  command => "/bin/sed -i /etc/default/nginx -e 's/15/3000/'"
+  command => "/bin/sed -i 's/15/3000/' /etc/default/nginx"
 }
 
 exec { 'restart nginx':
